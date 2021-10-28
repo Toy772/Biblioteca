@@ -67,7 +67,7 @@ public class main {
 				}
 				else
 				{
-					l.get(op - 1).Retirar(user.nome);
+					l.get(op - 1).Retirar(user.Nome());
 					System.out.println(" O LIVRO " + l.get(op - 1).titulo + " FOI RETIRADO");
 					disponivel = true;
 				}				
@@ -82,7 +82,7 @@ public class main {
 		System.out.println("DIGITE SEU NOME DE USUARIO ");
 		Scanner name = new Scanner(System.in);
 		u1.cadastrar(name.next());
-		System.out.println("SEJA BEM VINDO - "+ u1.nome); 
+		System.out.println("SEJA BEM VINDO - "+ u1.Nome()); 
 		
 		return u1;
 		
