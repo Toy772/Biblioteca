@@ -1,98 +1,54 @@
 package Telas;
 
-import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JButton;
-import java.awt.Font;
-import javax.swing.JTextField;
 
-import library.Usuario;
-
-import javax.swing.JPasswordField;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import AppWindow.Button;
+import AppWindow.Window2;
 
 public class Login {
-
-	private JFrame frame;
-	private JTextField Login_field;
-	private JPasswordField passwordField;
 	
-
-
-
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Login window = new Login();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
 	public Login() {
-		initialize();
-	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
+	}
+	
+	public static void main( String[] args) 
+	{
+		Window2 jw = new Window2("Janela", 800, 600);
 		
-		//-----------------------------------------------
+		//JButton b1 = new JButton("B1");		
+		//JButton b2 = new JButton("B2");
+		//JButton b3 = new JButton("B3");
+		
+		Button b4 = new Button("B4",350,350,350,40);
+		
+		Button b3 = new Button("B3",350,100);
 		
 		
 		
-		//CreateAdmin();
+		jw.AddButton(b4);
 		
-		//------------------------------------------------
+		jw.AddButton(b3);
 		
-		frame = new JFrame();
-		frame.setBounds(100, 100, 703, 571);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("ENTRAR");
-		btnNewButton.addActionListener(new ActionListener() {
+		b4.Jbutton().addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				ArrayList< Usuario> userlist = new ArrayList<>();				
-				userlist.add(new Usuario("Admin","123"));
-				
-				if(userlist.get(0).checkUser(Login_field.getText(), new String(passwordField.getPassword())))
-				{
-					JOptionPane.showMessageDialog(null,"ok validado");
-				}else {
-					JOptionPane.showMessageDialog(null,"ops algo deu errado");
-				}
-				
 			}
 		});
-		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton.setBounds(514, 334, 100, 40);
-		frame.getContentPane().add(btnNewButton);
+		//jw.AddButton(b2,350,100);
+		//jw.AddButton(b3,350,350,350,40);
 		
-		Login_field = new JTextField();
-		Login_field.setBounds(494, 242, 150, 30);
-		frame.getContentPane().add(Login_field);
-		Login_field.setColumns(10);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(494, 282, 150, 30);
-		frame.getContentPane().add(passwordField);
+		//b1.addActionListener(new ActionListener() {
+			//public void actionPerformed(ActionEvent e) {
+			
+			//JOptionPane.showMessageDialog(null, "Ok im Working");
+			//}
+		//});
+		
+		
 	}
+
 }

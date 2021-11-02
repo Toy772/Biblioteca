@@ -3,7 +3,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class main {
+	
+	
 	public static void Menu() {		
 		System.out.println("\n1- LISTAR LIVROS DA BIBLIOTECA");
 		System.out.println("2- CADASTRAR UM NOVO LIVRO");
@@ -170,12 +174,14 @@ public class main {
 		
 		return l;
 		
-	}
+	}	
+
 	
-	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
+	
 		int op = 0;
 		ArrayList<Livro> BibliotecaBooks = new ArrayList<>();
 		BibliotecaBooks = GerarLivrosPadrao();
